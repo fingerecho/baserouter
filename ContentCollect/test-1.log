@@ -1,0 +1,77 @@
+
+HTML5 Canvas
+
+
+<canvas> 标签定义图形，比如图表和其他图像，您必须使用脚本来绘制图形。
+在画布上（Canvas）画一个红色矩形，渐变矩形，彩色矩形，和一些彩色的文字。
+
+你的浏览器不支持 HTML5 的 <canvas> 元素.
+
+
+var c=document.getElementById("myCanvas");
+var canvOK=1;
+try {c.getContext("2d");}
+catch (er) {canvOK=0;}
+if (canvOK==1)
+	{
+	var ctx=c.getContext("2d");
+	ctx.fillStyle="#FF0000";
+	ctx.fillRect(20,20,100,50);
+	
+	var grd=ctx.createLinearGradient(140,20,240,70);
+    grd.addColorStop(0,"black");
+    grd.addColorStop(1,"white");
+    ctx.fillStyle=grd;
+    ctx.fillRect(140,20,100,50);
+    
+    var grd2=ctx.createLinearGradient(20,90,120,90);
+    grd2.addColorStop(0,"black");
+    grd2.addColorStop("0.3","magenta");
+    grd2.addColorStop("0.5","blue");
+    grd2.addColorStop("0.6","green");
+    grd2.addColorStop("0.8","yellow");
+    grd2.addColorStop(1,"red");
+    ctx.fillStyle=grd2;
+    ctx.fillRect(20,90,100,50);
+    
+    ctx.font="30px Verdana";
+    var grd3=ctx.createLinearGradient(140,20,240,90);
+    grd3.addColorStop(0,"black");
+    grd3.addColorStop("0.3","magenta");
+    grd3.addColorStop("0.6","blue");
+    grd3.addColorStop("0.8","green");
+    grd3.addColorStop(1,"red");
+    ctx.strokeStyle=grd3;
+    ctx.strokeText("Smile!",140,120); 
+	}
+	
+
+什么是 canvas?
+ HTML5 <canvas> 元素用于图形的绘制，通过脚本 (通常是JavaScript)来完成.
+<canvas> 标签只是图形容器，您必须使用脚本来绘制图形。
+你可以通过多种方法使用 canvas 绘制路径,盒、圆、字符以及添加图像。
+
+浏览器支持
+表格中的数字表示支持  <canvas> 元素的第一个浏览器版本号。
+
+
+
+创建一个画布（Canvas）
+一个画布在网页中是一个矩形框，通过 <canvas> 元素来绘制.
+注意: 默认情况下 <canvas> 元素没有边框和内容。
+<canvas>简单实例如下:
+
+<canvas id="myCanvas" width="200" height="100"></canvas>
+
+注意: 标签通常需要指定一个id属性 (脚本中经常引用), 
+width 和 height 属性定义的画布的大小.
+提示:你可以在HTML页面中使用多个  <canvas> 元素.
+使用 style 属性来添加边框:
+
+实例
+
+尝试一下 »
+
+
+使用 JavaScript 来绘制图像
+canvas 元素本身是没有绘图能力的。所有的绘制工作必须在 JavaScript 内部完成：

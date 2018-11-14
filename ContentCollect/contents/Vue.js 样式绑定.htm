@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>main-content</title>
+	<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/main-content.css">
+	
+</head>
+<body>
+
+<h1 class="page-header"></h1>
+
+
+<p>Vue.js classclass 属性绑定</p>
+<div class="demo bg-dark ">
+  <div class="demohead"><span>示例代码</span></div>
+  <div class="demoleft"></div>
+  <div class="democont">
+      <pre><code>&lt;div v-bind:class="{ active: isActive }"&gt;&lt;/div&gt;</code></pre>
+  </div>
+</div>
+
+<p></p>
+<div class="demo bg-dark ">
+  <div class="demohead"><span>示例代码</span></div>
+  <div class="demoleft"></div>
+  <div class="democont">
+      <pre><code>&lt;div class="static"
+v-bind:class="{ active: isActive, 'text-danger': hasError }"&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+
+<p></p>
+<div class="demo bg-dark ">
+  <div class="demohead"><span>示例代码</span></div>
+  <div class="demoleft"></div>
+  <div class="democont">
+      <pre><code>&lt;div id="app"&gt;
+&lt;div v-bind:class="classObject"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+
+<p></p>
+<div class="demo bg-dark ">
+  <div class="demohead"><span>示例代码</span></div>
+  <div class="demoleft"></div>
+  <div class="democont">
+      <pre><code>new Vue({
+el: '#app',
+  data: {
+isActive: true,
+    error: {
+value: true,
+      type: 'fatal'
+}
+},
+  computed: {
+classObject: function () {
+return {
+base: true,
+        active: this.isActive && !this.error.value,
+        'text-danger': this.error.value && this.error.type === 'fatal',
+      }
+}
+}
+})</code></pre>
+  </div>
+</div>
+
+<p></p>
+<div class="demo bg-dark ">
+  <div class="demohead"><span>示例代码</span></div>
+  <div class="demoleft"></div>
+  <div class="democont">
+      <pre><code>&lt;div v-bind:class="[activeClass, errorClass]"&gt;&lt;/div&gt;</code></pre>
+  </div>
+</div>
+
+<p></p>
+<div class="demo bg-dark ">
+  <div class="demohead"><span>示例代码</span></div>
+  <div class="demoleft"></div>
+  <div class="democont">
+      <pre><code>&lt;div v-bind:class="[errorClass ,isActive ? activeClass : '']"&gt;&lt;/div&gt;</code></pre>
+  </div>
+</div>
+
+<p>NoneVue.js style(内联样式)</p>
+<div class="demo bg-dark ">
+  <div class="demohead"><span>示例代码</span></div>
+  <div class="demoleft"></div>
+  <div class="democont">
+      <pre><code>&lt;div id="app"&gt;
+&lt;div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"&gt;元路由&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+
+<p></p>
+<div class="demo bg-dark ">
+  <div class="demohead"><span>示例代码</span></div>
+  <div class="demoleft"></div>
+  <div class="democont">
+      <pre><code>&lt;div id="app"&gt;
+&lt;div v-bind:style="styleObject"&gt;元路由&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+
+<p></p>
+<div class="demo bg-dark ">
+  <div class="demohead"><span>示例代码</span></div>
+  <div class="demoleft"></div>
+  <div class="democont">
+      <pre><code>&lt;div id="app"&gt;
+&lt;div v-bind:style="[baseStyles, overridingStyles]"&gt;元路由&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </div>
+</div>
+
+<p></p>
+<div class="demo bg-dark ">
+  <div class="demohead"><span>示例代码</span></div>
+  <div class="demoleft"></div>
+  <div class="democont">
+      <pre><code></code></pre>
+  </div>
+</div>
+
+
+</body>
+</html>

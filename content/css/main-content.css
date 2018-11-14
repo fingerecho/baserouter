@@ -1,0 +1,47 @@
+html,body,p{
+    margin: 0;padding: 0;
+}
+p{
+    font-family: Palatino, "Palatino Linotype",SimSun;
+}
+/*demo 样式 */
+.demo{
+    width:80%;
+    display:block;
+    padding-left:3%;
+    padding-right:3%;
+    padding-bottom:15px;
+    padding-top:0px;
+    float:left;
+   
+    border-radius:2px;
+}
+.demohead{
+    width:100%;
+    display:block;
+    text-align:left;
+    margin-top:5px;
+    margin-bottom:5px;
+    float:left;
+    
+    padding:0px;
+    
+}
+.demoleft{
+    width:5%;
+    height:100%;
+    float:left;
+    margin:0px;
+    padding:0px;
+    
+    background:gray;
+}
+.democont{
+    width:95%;
+    display:block;
+    padding:0px;
+    margin:0px;
+    float:right;
+    border-radius: 1px;
+    background:#fff;
+}

@@ -1,0 +1,43 @@
+
+实例 1
+实例中将 isActive 设置为 true 显示了一个绿色的 div 块，如果设置为 false 则不显示：
+
+
+尝试一下 »
+
+实例 2
+text-danger 类背景颜色覆盖了 active 类的背景色：
+
+
+尝试一下 »
+
+实例 3
+text-danger 类背景颜色覆盖了 active 类的背景色：
+
+
+尝试一下 »
+
+实例 4
+
+
+尝试一下 »
+我们可以把一个数组传给 v-bind:class ，实例如下：
+实例 5
+
+
+尝试一下 »
+
+实例 6
+errorClass 是始终存在的，isActive 为 true 时添加 activeClass 类：
+
+
+尝试一下 »
+Vue.js style(内联样式)
+
+以上实例 div style 为：
+<div style="color: green; font-size: 30px;">菜鸟教程</div>
+也可以直接绑定到一个样式对象，让模板更清晰：
+
+v-bind:style 可以使用数组将多个样式对象应用到一个元素上：
+
+

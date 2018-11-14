@@ -1,0 +1,8 @@
+
+                  <div>
+                    <ul class="nav justify-content-center">
+                      <li class="nav-item" v-for="item in items">
+                        <a  class="nav-link" v-bind:id="'side-bar-' + item.id" v-bind:conthref="item.href" v-on:click="hello"><span>{{item.title}}</span></a>
+                      </li>
+                    </ul>
+                  </div>

@@ -1,0 +1,129 @@
+
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div v-bind:class="{ active: isActive }"></div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div class="static"
+v-bind:class="{ active: isActive, 'text-danger': hasError }">
+</div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div id="app">
+<div v-bind:class="classObject"></div>
+</div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+new Vue({
+el: '#app',
+  data: {
+isActive: true,
+    error: {
+value: true,
+      type: 'fatal'
+}
+},
+  computed: {
+classObject: function () {
+return {
+base: true,
+        active: this.isActive && !this.error.value,
+        'text-danger': this.error.value && this.error.type === 'fatal',
+      }
+}
+}
+})
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div v-bind:class="[activeClass, errorClass]"></div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div v-bind:class="[errorClass ,isActive ? activeClass : '']"></div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div id="app">
+<div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">菜鸟教程</div>
+</div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div id="app">
+<div v-bind:style="styleObject">菜鸟教程</div>
+</div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div id="app">
+<div v-bind:style="[baseStyles, overridingStyles]">菜鸟教程</div>
+</div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div v-bind:class="{ active: isActive }"></div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div class="static"
+v-bind:class="{ active: isActive, 'text-danger': hasError }">
+</div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div id="app">
+<div v-bind:class="classObject"></div>
+</div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+new Vue({
+el: '#app',
+  data: {
+isActive: true,
+    error: {
+value: true,
+      type: 'fatal'
+}
+},
+  computed: {
+classObject: function () {
+return {
+base: true,
+        active: this.isActive && !this.error.value,
+        'text-danger': this.error.value && this.error.type === 'fatal',
+      }
+}
+}
+})
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div v-bind:class="[activeClass, errorClass]"></div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div v-bind:class="[errorClass ,isActive ? activeClass : '']"></div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div id="app">
+<div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">菜鸟教程</div>
+</div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div id="app">
+<div v-bind:style="styleObject">菜鸟教程</div>
+</div>
+-----------------------
+<tittle>default.title</tittle>
+-----------------------
+<div id="app">
+<div v-bind:style="[baseStyles, overridingStyles]">菜鸟教程</div>
+</div>
